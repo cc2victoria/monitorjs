@@ -39,8 +39,8 @@ root
 - turbo：任务编排
 
 # Publish
-构建： `pnpm build`
-TODO：发布到http://registry.npm.zhenaioa.com/文档
+构建： `pnpm build` 
+TODO： 发布初始版本
 
 ### 规范
 - eslint 代码规范
