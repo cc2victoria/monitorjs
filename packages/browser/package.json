@@ -30,7 +30,7 @@
     "types"
   ],
   "author": "cc2victoria@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@monitorjs/tsconfig": "workspace:^1.0.0",
     "@monitorjs/types": "workspace:1.0.0"
