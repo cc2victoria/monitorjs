@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+# [troubleshoot] Hooks not running
+#   1. Ensure that you don't have a typo in your filename. For example, precommit or pre-commit.sh are invalid names. See Git hooks documentation for valid names.
+#   2. Check that git config core.hooksPath returns .husky (or your custom hooks directory).
+#   3. Verify that hook files are executable. This is automatically set when using husky add command but you can run chmod +x .husky/<hookname> to fix that.
+#   4. Check that your version of Git is greater than 2.9.
+
+# For more troubleshoot details, pls check https://typicode.github.io/husky/#/?id=troubleshoot.
+npx --no-install commitlint --edit "$1"

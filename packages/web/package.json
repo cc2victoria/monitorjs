@@ -1,0 +1,48 @@
+{
+  "name": "@monitorjs/web",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "typings": "dist/types/index.d.ts",
+  "main": "dist/index.min.js",
+  "module": "dist/es/index.esm.min.js",
+  "publishConfig": {
+    "registry": "http://registry.npm.zhenaioa.com/",
+    "access": "public"
+  },
+  "scripts": {
+    "ci:coverage": "nyc pnpm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "ci:lint": "pnpm build && pnpm lint",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "pnpm test -- --verbose",
+    "build": "rollup -c rollup.config.ts",
+    "dev": "run-p watch:*",
+    "watch:ts": "tsc -b -w",
+    "watch:js": "rollup -c rollup.config.ts -w",
+    "prebuild": "rimraf dist && tsc",
+    "prerelease": "pnpm build",
+    "pretest": "pnpm build",
+    "release": "pnpm plugin:release --workspace-root -- --pkg $npm_package_name",
+    "test": "ava",
+    "test:ts": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@monitorjs/tsconfig": "workspace:*",
+    "@monitorjs/types": "workspace:*"
+  },
+  "dependencies": {
+    "@monitorjs/shared": "workspace:*",
+    "perfume.js": "^8.0.0"
+  },
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "monitor"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>@monitorjscore SDK examples</title>
+    <script src="./dist/index.iife.js"></script>
+    <script type="text/javascript" src="//i.zhenai.com/common/m/base/js/zhenai-2.0.7.min.js"></script>
+    <script type="text/javascript" src="//i.zhenai.com/common/m/base/js/zhenai_extra-2.0.7.min.js"></script>
+    <script src="test.js"></script>
+    <style>
+      button {
+        display: block;
+        margin: 0.5em 0;
+        font-size: 1em;
+        cursor: pointer;
+        padding: 0.5em;
+      }
+
+      button:hover {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <button id="deny-url" elementtiming="testDenyUrl">denyUrls example</button>
+      <button id="allow-url">allowUrls example</button>
+      <button id="ignore-message">ignoreError message example</button>
+      <button id="ignore-type">ignoreError type example</button>
+      <button id="regular-exception">regularException example</button>
+      <button id="capture-exception">captureException example</button>
+      <button id="capture-message">captureMessage example</button>
+      <button id="duplicate-exception">duplicated exception example</button>
+      <button id="duplicate-message">duplicated message example</button>
+      <button data-label="User Defined Label" id="breadcrumb-hint">breadcrumb hints example</button>
+    </div>
+    <div id="app"></div>
+  </body>
+</html>

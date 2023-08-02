@@ -1,0 +1,30 @@
+// AUTO GENERATED
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "monitorjs": ["src"],
+      "monitorjs/*": ["src/*"],
+      "@monitorjs/docs": ["apps/docs-web/src"],
+      "@monitorjs/docs/*": ["apps/docs-web/src/*"],
+      "@monitorjs/browser": ["packages/browser/src"],
+      "@monitorjs/browser/*": ["packages/browser/src/*"],
+      "@monitorjs/core": ["packages/core/src"],
+      "@monitorjs/core/*": ["packages/core/src/*"],
+      "@monitorjs/eslint-config-custom": ["packages/eslint-config-custom/src"],
+      "@monitorjs/eslint-config-custom/*": ["packages/eslint-config-custom/src/*"],
+      "@monitorjs/plugin-window-error": ["packages/plugin-window-error/src"],
+      "@monitorjs/plugin-window-error/*": ["packages/plugin-window-error/src/*"],
+      "@monitorjs/shared": ["packages/shared/src"],
+      "@monitorjs/shared/*": ["packages/shared/src/*"],
+      "@monitorjs/transport-xml-http-request": ["packages/transport-xml-http-request/src"],
+      "@monitorjs/transport-xml-http-request/*": ["packages/transport-xml-http-request/src/*"],
+      "@monitorjs/tsconfig": ["packages/tsconfig/src"],
+      "@monitorjs/tsconfig/*": ["packages/tsconfig/src/*"],
+      "@monitorjs/types": ["packages/types/src"],
+      "@monitorjs/types/*": ["packages/types/src/*"],
+      "@monitorjs/web": ["packages/web/src"],
+      "@monitorjs/web/*": ["packages/web/src/*"]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@monitorjs/core",
+  "version": "1.0.0",
+  "description": "Core client for Monitor",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/types/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "ci:coverage": "nyc pnpm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "ci:lint": "pnpm build && pnpm lint",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "pnpm test -- --verbose",
+    "build": "rollup -c rollup.config.js",
+    "dev": "run-p watch:*",
+    "watch:ts": "tsc -b -w",
+    "watch:js": "rollup -c rollup.config.js -w",
+    "prebuild": "rimraf dist && tsc",
+    "prerelease": "pnpm build",
+    "pretest": "pnpm build",
+    "release": "pnpm plugin:release --workspace-root -- --pkg $npm_package_name",
+    "test": "ava",
+    "test:ts": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@monitorjs/tsconfig": "workspace:*",
+    "@monitorjs/types": "workspace:*"
+  },
+  "dependencies": {
+    "@monitorjs/shared": "workspace:*"
+  }
+}

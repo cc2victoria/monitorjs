@@ -1,0 +1,15 @@
+{
+  "name": "@monitorjs/browser-iife-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cp ../../../packages/browser/dist/index.iife.js ./dist/ && npx httpserver -p 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "httpserver": "^0.3.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Monitor-Library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["ES2015", "DOM"],
+    "sourceMap": true,
+    "target": "ES5",
+    "module": "ES2015",
+    "removeComments": true,
+    "importHelpers": true
+  },
+  "exclude": ["dist", "node_modules", "test/types"]
+}

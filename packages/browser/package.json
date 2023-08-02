@@ -1,0 +1,43 @@
+{
+  "name": "@monitorjs/browser",
+  "version": "1.0.0",
+  "description": "Monitor browser error and performance monitor",
+  "type": "module",
+  "typings": "dist/types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/es/index.esm.js",
+  "iife": "dist/index.iife.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "ci:coverage": "nyc pnpm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "ci:lint": "pnpm build && pnpm lint",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "pnpm test -- --verbose",
+    "build": "rollup -c rollup.config.js",
+    "dev": "run-p watch:*",
+    "watch:ts": "tsc -b -w",
+    "watch:js": "rollup -c rollup.config.js -w",
+    "prebuild": "rimraf dist && tsc",
+    "prerelease": "pnpm build",
+    "pretest": "pnpm build",
+    "release": "pnpm plugin:release --workspace-root -- --pkg $npm_package_name",
+    "test": "ava",
+    "test:ts": "tsc --noEmit"
+  },
+  "keywords": [],
+  "files": [
+    "dist",
+    "types"
+  ],
+  "author": "cc2victoria@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@monitorjs/tsconfig": "workspace:^1.0.0",
+    "@monitorjs/types": "workspace:1.0.0"
+  },
+  "dependencies": {
+    "@monitorjs/core": "workspace:^1.0.0",
+    "@monitorjs/shared": "workspace:^1.0.0",
+    "perfume.js": "^8.0.0"
+  }
+}

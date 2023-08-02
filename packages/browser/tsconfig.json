@@ -1,0 +1,12 @@
+{
+  "extends": "@monitorjs/tsconfig/monitor-library.json",
+  "include": ["src/**/*"],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "declarationDir": "dist/types",
+    "outDir": "dist/es",
+    "sourceMap": true,
+    "isolatedModules": false,
+    "resolveJsonModule": true
+  }
+}

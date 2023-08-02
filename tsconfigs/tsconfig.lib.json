@@ -1,0 +1,14 @@
+// AUTO GENERATED
+{
+  "compilerOptions": { "noEmit": true },
+  "include": [],
+  "references": [
+    { "path": "../packages/browser" },
+    { "path": "../packages/core" },
+    { "path": "../packages/plugin-window-error" },
+    { "path": "../packages/shared" },
+    { "path": "../packages/transport-xml-http-request" },
+    { "path": "../packages/types" },
+    { "path": "../packages/web" }
+  ]
+}
